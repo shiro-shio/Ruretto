@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>轉盤遊戲</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="mainContainer">
+  <div id="listContainer">
+    <form id="listForm">
+      <label for="list">請輸入項目清單（每行一個項目）：</label>
+      <textarea id="list" name="list" rows="5" cols="33"></textarea>
+      <button type="submit">提交清單</button>
+    </form>
+  </div>
+  <div id="wheelContainer">
+    <div id="wheel">
+      <div id="pointer"></div>
+      <canvas id="canvas" width="500" height="500"></canvas>
+      <button id="spin">GO!</button>
+    </div>
+  </div>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <!--span class="close">&times;</span-->
+      <p id="modalText"></p>
+      <button id="confirmBtn">確認</button>
+      <button id="cancelBtn">取消</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
