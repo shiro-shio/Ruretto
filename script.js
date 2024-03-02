@@ -79,6 +79,7 @@ function drawWheel() {
   const arc = Math.PI / (options.length / 2);
   const fontSize = Math.max(10, 30 - (options.length * 0.5)); // 假設基礎大小為20，每增加一個選項，字體大小減少0.5，但不小於10
   let repeat = 1
+  let clr = 0
   for (let i = 0; i < options.length; i++) {
     if (options[i] === options[i+1]){
       repeat +=1
@@ -88,7 +89,8 @@ function drawWheel() {
     ctx.beginPath();
     ctx.moveTo(250, 250);
     ctx.arc(250, 250, 250, angle, endAngle, false);
-    ctx.fillStyle = colors[i % colors.length];
+    clr +=1
+    ctx.fillStyle = colors[clr % colors.length];
     ctx.fill();
     ctx.save();
     ctx.fillStyle = "#000";
