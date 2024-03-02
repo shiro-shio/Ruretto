@@ -8,6 +8,9 @@
 <body>
 
 <div id="mainContainer">
+  <div id="imageContainer" style="display: none;">
+    <img id="toggleImage" src="img/image.png">
+  </div>
   <div id="listContainer">
     <form id="listForm">
       <label for="list">請輸入項目清單（每行一個項目）：</label>
@@ -19,15 +22,19 @@
     <div id="wheel">
       <div id="pointer"></div>
       <canvas id="canvas" width="500" height="500"></canvas>
-      <button id="spin">GO!</button>
+      <!--button id="spin">GO!</button-->
+      <img id="spin" src="img/button.png" style="cursor: pointer;">
     </div>
+    <button id="toggleListBtn">隱藏/顯示</button>
   </div>
   <div id="myModal" class="modal">
     <div class="modal-content">
       <!--span class="close">&times;</span-->
       <p id="modalText"></p>
-      <button id="confirmBtn">確認</button>
-      <button id="cancelBtn">取消</button>
+      <div>
+        <button id="confirmBtn">確認</button>
+        <button id="cancelBtn">取消</button>
+      </div>
     </div>
   </div>
 </div>

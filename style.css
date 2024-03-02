@@ -4,7 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
-  }
+}
   
 #wheel {
     width:500px;
@@ -24,7 +24,7 @@ body {
     left: 100%;
     /*transform-origin: center center;*/
     transform: translate(-50%, -50%) rotate(90deg); /* 水平居中 */
-  }
+}
 
 #canvas {
     width:500px;/*496*/
@@ -58,37 +58,52 @@ button {
     }
 
 #mainContainer {
-  display: flex;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 #listContainer {
-  flex: 1; /* 調整清單區域的大小 */
-  padding: 20px; /* 為了美觀，給清單區域一些內邊距 */
+    flex: 1; /* 調整清單區域的大小 */
+    padding: 20px; /* 為了美觀，給清單區域一些內邊距 */
+    display: block;
+    height: 550px;
+    width: 300px;
+}
+
+#imageContainer {
+    flex: 1;
+    padding: 20px;
+    width: 300px;
+    height: 550px;
+}
+
+img {
+    background-color: #ffffff00;
 }
 
 #wheelContainer {
-  flex: 2; /* 調整轉盤遊戲區域的大小 */
-  padding: 20px; /* 為了美觀，給轉盤遊戲區域一些內邊距 */
+    display: grid;
+    flex: 2; /* 調整轉盤遊戲區域的大小 */
+    padding: 20px; /* 為了美觀，給轉盤遊戲區域一些內邊距 */
 }
 
 /* 保持之前的 CSS 不變 */
 #listInput {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 #listForm {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #list {
-  margin: 10px 0;
-  height: 450px;
-  min-width: 250px;
-  max-width: 300px;
-  min-height: 125px;
-  max-height: 600px;
-  
+    margin: 10px 0;
+    height: 450px;
+    min-width: 250px;
+    max-width: 300px;
+    min-height: 125px;
+    max-height: 600px;
 }
 
 #mainContainer {
@@ -96,18 +111,13 @@ button {
 }
 
 #listContainer {
-flex: 1; /* 調整清單區域的大小 */
-padding: 20px; /* 為了美觀，給清單區域一些內邊距 */
-}
-
-#wheelContainer {
-flex: 2; /* 調整轉盤遊戲區域的大小 */
-padding: 20px; /* 為了美觀，給轉盤遊戲區域一些內邊距 */
+    flex: 1; /* 調整清單區域的大小 */
+    padding: 20px; /* 為了美觀，給清單區域一些內邊距 */
 }
 
 /* 保持之前的 CSS 不變 */
 #listInput {
-margin-top: 20px;
+    margin-top: 20px;
 }
 
 .modal {
@@ -121,32 +131,26 @@ margin-top: 20px;
     overflow: auto; /* 啟用滾動條 */
     background-color: rgb(0,0,0); /* 背景顏色 */
     background-color: rgba(0,0,0,0.4); /* 背景顏色，帶有透明度 */
-  }
+}
   
   /* 彈出內容的樣式 */
-  .modal-content {
+.modal-content {
+    position: absolute;
+    left: 35%;
+    top: 5%;
     display: flex;
     flex-direction: column;
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 15%;
+    width: 200px;
     justify-content: center;
     align-items: center;
-  }
+}
   
-  /* 關閉按鈕的樣式 
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }*/
+#toggleListBtn{
+    display: contents;
+    width: 120px;
+    height: 40px;
+}

@@ -179,3 +179,19 @@ function showAlert(message, callback) {
 function closeModal() {
   modal.style.display = "none";
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleListBtn = document.getElementById('toggleListBtn');
+  const listContainer = document.getElementById('listContainer');
+  const imageContainer = document.getElementById('imageContainer');
+  toggleListBtn.addEventListener('click', function() {
+    // 檢查清單容器的顯示狀態並切換
+    if (listContainer.style.display === 'none') {
+      listContainer.style.display = 'block'; // 顯示
+      imageContainer.style.display = 'none';
+    } else {
+      listContainer.style.display = 'none'; // 隱藏
+      imageContainer.style.display = 'block';
+    }
+  });
+});
