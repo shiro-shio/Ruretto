@@ -18,12 +18,23 @@ const wheelCenter = { x: wheel.offsetWidth / 2, y: wheel.offsetHeight / 2 };
 
 
 
-
 document.getElementById('listForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  options = document.getElementById('list').value.trim().split('\n');
+  const submitterValue = e.submitter.value;
+  switch (submitterValue) {
+    case '1':
+      options = document.getElementById('list').value.trim().split('\n');
+      break;
+    case '2':
+      options = _sort(document.getElementById('list').value.trim().split('\n'));
+      break;
+    case '3':
+      options = shuffleArray(document.getElementById('list').value.trim().split('\n'));
+      break;
+  }
   drawWheel()
 });
+
 
 pointer.addEventListener('mousedown', function(e) {
   e.preventDefault();
@@ -50,14 +61,30 @@ document.addEventListener('mouseup', function(e) {
   isDragging = false;
 });
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
+function _sort(array) {
+  array.sort();
+  return array;
+}
 
 function drawWheel() {
   let angle = startAngle;
   const arc = Math.PI / (options.length / 2);
   const fontSize = Math.max(10, 30 - (options.length * 0.5)); // 假設基礎大小為20，每增加一個選項，字體大小減少0.5，但不小於10
+  let repeat = 1
   for (let i = 0; i < options.length; i++) {
-    let endAngle = angle + arc;
+    if (options[i] === options[i+1]){
+      repeat +=1
+      continue;
+    }
+    let endAngle = angle + (arc*repeat);
     ctx.beginPath();
     ctx.moveTo(250, 250);
     ctx.arc(250, 250, 250, angle, endAngle, false);
@@ -70,7 +97,8 @@ function drawWheel() {
     ctx.rotate(angle + arc / 2);
     ctx.fillText(options[i], (-ctx.measureText(options[i]).width / 2)+50, 5);
     ctx.restore();
-    angle += arc;
+    angle += (arc*repeat);
+    repeat = 1
   }
 }
 
