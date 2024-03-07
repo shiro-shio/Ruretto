@@ -95,9 +95,9 @@ function drawWheel() {
     ctx.save();
     ctx.fillStyle = "#000";
     ctx.font = `${fontSize}px Arial`;
-    ctx.translate(250 + Math.cos(angle + arc / 2) * 150, 250 + Math.sin(angle + arc / 2) * 150);
+    ctx.translate(250 + Math.cos(angle + (arc / 2)*repeat) * 200, 250 + Math.sin(angle + (arc / 2)*repeat) * 200);
     ctx.rotate(angle + arc / 2);
-    ctx.fillText(options[i], (-ctx.measureText(options[i]).width / 2)+50, 5);
+    ctx.fillText(options[i], (-ctx.measureText(options[i]).width / 2), 5);
     ctx.restore();
     angle += (arc*repeat);
     repeat = 1
