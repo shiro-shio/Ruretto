@@ -17,13 +17,13 @@ body {
     position: absolute;
     width: auto; 
     height: 0; 
-    border-left: 10px solid transparent; /* 左边透明边框 */
-    border-right: 10px solid transparent; /* 右边透明边框 */
-    border-top: 20px solid black; /* 底部黑色边框，形成朝上的三角形 */
-    top: 50%; /* 根据需要调整，确保三角形位于转盘边缘 */
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid black;
+    top: 50%;
     left: 100%;
     /*transform-origin: center center;*/
-    transform: translate(-50%, -50%) rotate(90deg); /* 水平居中 */
+    transform: translate(-50%, -50%) rotate(90deg);
 }
 
 #canvas {
@@ -43,13 +43,13 @@ button {
 
 #spin {
     position: absolute;
-    width: 80px; /* 根据需要调整 */
-    height: 80px; /* 根据需要调整 */
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    background-color: #8b93f3a1; /* 根据需要调整 */
+    background-color: #8b93f3a1;
     color: #fff;
     font-size: 14px;
-    line-height: 0px; /* 与按钮高度相同，以垂直居中文本 */
+    line-height: 0px;
     text-align: center;
     border: none;
     cursor: pointer;
@@ -64,8 +64,8 @@ button {
 }
 
 #listContainer {
-    flex: 1; /* 調整清單區域的大小 */
-    padding: 20px; /* 為了美觀，給清單區域一些內邊距 */
+    flex: 1;
+    padding: 20px;
     display: block;
     height: 550px;
     width: 300px;
@@ -84,11 +84,11 @@ img {
 
 #wheelContainer {
     display: grid;
-    flex: 2; /* 調整轉盤遊戲區域的大小 */
-    padding: 20px; /* 為了美觀，給轉盤遊戲區域一些內邊距 */
+    flex: 2;
+    padding: 20px;
 }
 
-/* 保持之前的 CSS 不變 */
+
 #listInput {
     margin-top: 20px;
 }
@@ -112,8 +112,8 @@ img {
 }
 
 #listContainer {
-    flex: 1; /* 調整清單區域的大小 */
-    padding: 20px; /* 為了美觀，給清單區域一些內邊距 */
+    flex: 1;
+    padding: 20px;
 }
 
 /* 保持之前的 CSS 不變 */
@@ -122,27 +122,26 @@ img {
 }
 
 .modal {
-    display: none; /* 隱藏彈出層 */
-    position: fixed; /* 固定定位 */
-    z-index: 1; /* 置於頂層 */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* 全屏寬 */
-    height: 100%; /* 全屏高 */
-    overflow: auto; /* 啟用滾動條 */
-    background-color: rgb(0,0,0); /* 背景顏色 */
-    background-color: rgba(0,0,0,0.4); /* 背景顏色，帶有透明度 */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
 }
   
-  /* 彈出內容的樣式 */
 .modal-content {
     position: absolute;
     left: 35%;
-    top: 5%;
+    top: 40%;
     display: flex;
     flex-direction: column;
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 0% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 200px;
