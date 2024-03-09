@@ -8,7 +8,9 @@ https://shiro-shio.github.io/Ruretto/
 
 >EX:A,B,B,C,D
 >>A=10%,B=20%,C=10%,D=10 只有4塊
+
 >EX:A,B,C,B,D
+>
 >>A=10%,B=10%,C=10%,B=10%,D=10 會有5塊
 
 3.黑色箭頭(指標)可拖動改變方向
