@@ -1,1 +1,1 @@
-https://yakumo-kuro.github.io/Ruretto/
+https://shiro-shio.github.io/Ruretto/
